@@ -16,7 +16,8 @@ router.get('/', verify, async (req, res) => {
 router.post('/new', async (req, res) => {
     const invoice = new Invoice({
         title: req.body.title,
-        amount: req.body.amount
+        lines: req.body.lines,
+        total: req.body.total
     });
     try {
         const savedInvoice = await invoice.save();

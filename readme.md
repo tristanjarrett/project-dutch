@@ -8,3 +8,4 @@ Login: http://localhost:3000/api/user/login, POST
 ### Invoices
 
 List: http://localhost:3000/api/invoices, GET
+Create: http://localhost:3000/api/invoices/new, POST
