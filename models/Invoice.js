@@ -9,13 +9,29 @@ const invoiceSchema = new mongoose.Schema({
     },
     lines: [
         {
-            item: {
+            title: {
                 type: String,
                 required: true,
                 min: 1,
                 max: 255
             },
+            description: {
+                type: String,
+                required: true,
+                min: 0,
+                max: 255
+            },
             amount: {
+                type: Number,
+                required: true,
+                min: 0
+            },
+            quantity: {
+                type: Number,
+                required: true,
+                min: 0
+            },
+            total: {
                 type: Number,
                 required: true,
                 min: 0
