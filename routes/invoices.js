@@ -16,10 +16,11 @@ router.get('/', verify, async (req, res) => {
 router.post('/new', verify, async (req, res) => {
 
     const sum = function(items, prop){
-        let output = 0;
+        let val = 0;
         for (i = 0; items.length > i; i++) {
-            output += parseInt(items[i][prop]);
+            val += parseFloat(items[i][prop]);
         }
+        let output = val.toFixed(2);
         return output;
     };
 
