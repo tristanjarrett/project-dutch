@@ -26,4 +26,4 @@ mongoose.connect(
     () => console.log('Connected to DB')
 );
 
-app.listen(3000, () => console.log('Server running on 3000'));
+app.listen(5000, () => console.log('Server running on 5000'));
